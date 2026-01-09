@@ -4,21 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Usama Sarwar - Portfolio</title>
+    <title>Md Raisul Islam - Portfolio</title>
+    
+    <!-- Optional redirect if you want to default to index.html -->
     <meta http-equiv="refresh" content="0; url=./index.html">
     <script>
-      // Immediate redirect for better UX
       window.location.href = './index.html';
     </script>
-    </head>
-    
-    <body>
-      <p>Redirecting to the new portfolio...</p>
-      <p>If you are not redirected automatically, <a href="./index.html">click here</a>.</p>
-    </body>
-    
-    </html>
 
+    <!-- CSS Styling -->
     <style>
       body {
         max-width: 100%;
@@ -188,7 +182,6 @@
         }
       }
     
-      /* Badge styling improvements */
       .main-content img[src*="shields.io"] {
         margin: 4px;
         border-radius: 6px;
@@ -201,19 +194,10 @@
         box-shadow: 0 4px 12px rgba(159, 122, 234, 0.3);
       }
     
-      /* Gradient animations */
       @keyframes gradientShift {
-        0% {
-          background-position: 0% 50%;
-        }
-    
-        50% {
-          background-position: 100% 50%;
-        }
-    
-        100% {
-          background-position: 0% 50%;
-        }
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
       }
     
       .main-content h1::after {
@@ -226,7 +210,6 @@
         border-radius: 2px;
       }
     
-      /* Custom scrollbar */
       ::-webkit-scrollbar {
         width: 12px;
       }
@@ -244,84 +227,65 @@
         background: var(--primary-dark);
       }
     
-      /* Selection color */
       ::selection {
         background-color: var(--primary-color);
         color: white;
       }
     </style>
+
     <!-- Site Metadata -->
-    <title>{{ page.title | default: site.title | default: "Usama Sarwar - Full-Stack Flutter Developer" }}</title>
-    <meta name="description"
-      content="{{ page.description | default: site.description | default: 'Professional Software Engineer expert at cross-platform Flutter App Development, Community Builder & Open Source Advocate.' }}">
-    <meta name="keywords"
-      content="usama sarwar,flutter developer,software engineer,open source,community builder,full-stack developer,mobile app development">
-    <meta name="author" content="Usama Sarwar">
+    <meta name="description" content="Professional Flutter & Full-Stack Developer">
+    <meta name="keywords" content="Md Raisul Islam,flutter developer,full-stack developer,python,dart,java,c,firebase,mysql">
+    <meta name="author" content="Md Raisul Islam">
     <meta name="robots" content="index,follow">
+
     <!-- Social Media Meta Tags -->
-    <meta property="og:site_name" content="Usama Sarwar">
-    <meta property="og:title"
-      content="{{ page.title | default: site.title | default: 'Usama Sarwar - Full-Stack Flutter Developer' }}">
-    <meta property="og:url" content="{{ page.url | absolute_url }}">
+    <meta property="og:site_name" content="Md Raisul Islam">
+    <meta property="og:title" content="Md Raisul Islam - Full-Stack Flutter Developer">
+    <meta property="og:url" content="https://raisul-dev.github.io">
     <meta property="og:type" content="website">
-    <meta property="og:description"
-      content="{{ page.description | default: site.description | default: 'Professional Software Engineer expert at cross-platform Flutter App Development.' }}">
+    <meta property="og:description" content="Professional Flutter & Full-Stack Developer">
     <meta property="og:image" content="{{ '/images/coding.gif' | absolute_url }}">
-    
-    <!-- Twitter Card -->
+
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="{{ page.title | default: site.title | default: 'Usama Sarwar' }}">
-    <meta name="twitter:description"
-      content="{{ page.description | default: site.description | default: 'Professional Software Engineer & Community Builder' }}">
+    <meta name="twitter:title" content="Md Raisul Islam - Full-Stack Flutter Developer">
+    <meta name="twitter:description" content="Professional Flutter & Full-Stack Developer">
     <meta name="twitter:image" content="{{ '/images/coding.gif' | absolute_url }}">
-    <meta name="twitter:creator" content="@UsamaSarwarPro">
+    <meta name="twitter:creator" content="@raisulislam101">
+
     <!-- iOS Meta Tags -->
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="apple-mobile-web-app-title" content="Usama Sarwar">
-    <!-- Analytics -->
-    {% if site.google_analytics %}
-    <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() { dataLayer.push(arguments); }
-      gtag('js', new Date());
-      gtag('config', '{{ site.google_analytics }}');
-    </script>
-    {% endif %}
-  </head>
-  <body>
+    <meta name="apple-mobile-web-app-title" content="Md Raisul Islam">
+    
+</head>
+<body>
     <main id="content" class="main-content" role="main">
       {{ content }}
 
       <footer class="site-footer">
         <span class="site-footer-credits">
           © {{ 'now' | date: "%Y" }}
-          <a href="https://usama.dev" target="_blank" rel="noopener">Usama Sarwar</a>
+          <a href="https://github.com/raisul-dev" target="_blank" rel="noopener">Md Raisul Islam</a>
           • Built with ❤️ using Jekyll & GitHub Pages
         </span>
       </footer>
     </main>
+
     <!-- Smooth Scrolling Script -->
     <script>
-      // Smooth scrolling for anchor links
       document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
           e.preventDefault();
-          document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-          });
+          document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
         });
       });
 
-      // Add loading animation for images
       document.querySelectorAll('img').forEach(img => {
-        img.addEventListener('load', function () {
-          this.style.opacity = '1';
-        });
+        img.addEventListener('load', function () { this.style.opacity = '1'; });
         img.style.opacity = '0';
         img.style.transition = 'opacity 0.3s ease-in-out';
       });
     </script>
-  </body>
+</body>
 </html>
